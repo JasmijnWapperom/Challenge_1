@@ -1,0 +1,186 @@
+.home {
+  background-color: #1e1e29;
+  font: 16px/26px D-DIN-Regular, Arial, Verdana, sans-serif;
+  font-weight: 400;
+  color: #fff;
+  overflow-x: hidden;
+}
+
+.sx-aside {
+  min-height: 100%;
+  background-color: #191920;
+  z-index: 3;
+  width: 120px;
+  padding: 40px 20px;
+}
+.sx-aside__brand {
+  margin-bottom: 70px;
+}
+.sx-aside__brand img {
+  display: block;
+  width: 100%;
+  margin-left: 10px;
+}
+.sx-aside__menu-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+.sx-aside__menu-list-item {
+  text-align: center;
+  font-size: 40px;
+  margin-bottom: 30px;
+  color: #58595e;
+  transition: color 0.15s;
+}
+.sx-aside__menu-list-item:hover, .sx-aside__menu-list-item--active {
+  color: #fff;
+}
+
+.bg-video {
+  position: absolute;
+  top: 0;
+  left: 110px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+.app-head {
+  text-transform: uppercase;
+  margin-bottom: 40px;
+}
+.app-container {
+  z-index: 2;
+  width: 100%;
+  padding: 40px 80px;
+}
+.app-body {
+  display: flex;
+  flex-direction: column;
+}
+.app-content {
+  position: relative;
+  z-index: 2;
+}
+
+.general-info-item {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+.general-info-item-label {
+  font-size: 14px;
+  color: #58595e;
+  margin-bottom: 7px;
+}
+.general-info-item-info {
+  font-size: 23px;
+}
+
+.canvas-wrapper {
+  margin-left: -20px;
+  width: 100%;
+  background-color: #191920;
+}
+.canvas-wrapper #myChart {
+  height: 400px;
+}
+
+.not-supported-mobile {
+  color: #fff;
+  display: none;
+  text-align: center;
+}
+
+.right-col {
+  margin-left: auto;
+}
+
+.starship-map {
+  display: flex;
+  width: 30%;
+  position: relative;
+  justify-content: space-between;
+  align-items: center;
+}
+.starship-map .start, .starship-map .destination {
+  min-width: 50px;
+  height: 50px;
+  border-radius: 25px;
+  background-color: lightblue;
+}
+.starship-map .start::after {
+  content: "Earth";
+  position: absolute;
+  bottom: -25px;
+  left: 6px;
+}
+.starship-map .destination::after {
+  content: "Mars";
+  position: absolute;
+  bottom: -25px;
+  right: 7px;
+}
+.starship-map .travel-line {
+  width: 100%;
+  border-top: 1px dashed #fff;
+  height: 1px;
+}
+.starship-map .destination {
+  align-self: flex-end;
+  background-color: #c1440e;
+}
+.starship-map img {
+  position: absolute;
+  width: 40px;
+  transform: rotate(90deg);
+}
+
+@media only screen and (max-width: 768px) {
+  .dashboard-stats {
+    flex-direction: column;
+  }
+
+  .bg-video {
+    left: 0;
+  }
+
+  .app-container {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+  }
+
+  .app-content {
+    border-radius: unset;
+    padding: unset;
+  }
+
+  .starship-map {
+    margin-top: 50px;
+    width: 100%;
+  }
+
+  .right-col {
+    margin-left: unset;
+  }
+
+  .not-supported-mobile {
+    display: block;
+  }
+
+  .canvas-wrapper {
+    display: none;
+  }
+}
+@media only screen and (max-width: 1100px) {
+  .app-content {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    padding-bottom: 40px;
+    border-radius: 10px;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,64 @@
+<video class="bg-video" autoplay loop mute>
+    <source type="video/webm" src="./assets/video/WebsiteStarshipStack_Anim_Render_Desktop.webm">
+</video>
+<div x-data="dashboardComponent()" x-init="init()" class="app-content">
+    <div class="app-head">
+        <h2>Starship</h2>
+    </div>
+    <div class="app-body">
+        <div class="flex flex-grow dashboard-stats">
+            <div class="flex flex-col">
+                <div class="general-info-item">
+                    <label class="general-info-item-label">System status</label>
+                    <span class="general-info-item-info">Nominal</span>
+                </div>
+                <div class="general-info-item">
+                    <label class="general-info-item-label">Date</label>
+                    <span class="general-info-item-info" x-text="date">-</span>
+                </div>
+                <div class="general-info-item">
+                    <label class="general-info-item-label">Time</label>
+                    <span class="general-info-item-info" x-text="time">-</span>
+                </div>
+                <div class="general-info-item">
+                    <label class="general-info-item-label">Days till arrival</label>
+                    <span class="general-info-item-info">64 Days</span>
+                </div>
+                <div class="general-info-item">
+                    <label class="general-info-item-label">Passed %</label>
+                    <span class="general-info-item-info">68%</span>
+                </div>
+            </div>
+
+            <div class="flex flex-col right-col">
+                <div class="general-info-item">
+                    <label class="general-info-item-label">Fuel</label>
+                    <span class="general-info-item-info"><span x-text="routeElapsed"></span>%</span>
+                </div>
+                <div class="general-info-item">
+                    <label class="general-info-item-label">oxygen<sup>(o2)</sup></label>
+                    <span class="general-info-item-info"><span x-text="routeElapsed"></span>%</span>
+                </div>
+                <div class="general-info-item">
+                    <label class="general-info-item-label">Inertial velocity</label>
+                    <span class="general-info-item-info">7,68 km/s</span>
+                </div>
+                <div class="general-info-item">
+                    <label class="general-info-item-label">g-force</label>
+                    <span class="general-info-item-info">≈ 0 g</span>
+                </div>
+                <div class="general-info-item">
+                    <label class="general-info-item-label">Current atmosphere</label>
+                    <span class="general-info-item-info">Outer space</span>
+                </div>
+            </div>
+        </div>
+        <div class="starship-map">
+            <div class="start"></div>
+            <img src="assets/images/rocket.svg" :style="`margin-left: ${routeElapsed}%`" alt="rocket" />
+            <div class="travel-line"></div>
+            <div class="destination"></div>
+        </div>
+    </div>
+
+</div>
